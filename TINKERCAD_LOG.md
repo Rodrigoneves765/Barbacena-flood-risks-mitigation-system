@@ -80,7 +80,7 @@ Moving the virtual target between these distances is the quickest way to check e
 ## Simulation Notes
 * The Arduino preprocessor places auto-generated function prototypes above the `enum Estado` declaration. A function that returns `Estado` therefore causes the compile error `'Estado' does not name a type`. In the simulation build, `classificar()` returns `int` and is cast back with `(Estado)` inside `loop()`.
 * The virtual sensor has an adjustable target distance that only appears while the simulation is running.
-
+* GPIO 12 and 13 are used here only because the Arduino Uno has no onboard LoRa radio. On the Heltec V3 these pins are wired to the SX1262 (RST and BUSY), so the physical build will use different pins for TRIG and ECHO.
 ---
 
 ## Next Steps
