@@ -42,23 +42,23 @@ The 4-pin ultrasonic module (VCC, TRIG, ECHO, GND) is plugged into the upper rai
 
 *Figure 15: First setup of the hardware in Autodesk Tinkercad. A 1k ohm resistor (R1) is placed vertically across the middle gap of the breadboard, as the first part of the 3.3V voltage divider.*
 
-<img width="909" height="41" alt="image" src="https://github.com/user-attachments/assets/1094c408-d6f7-4091-a8cd-dbdf339d9ae2" />
+<img width="1600" height="787" alt="Figure 16" src="https://github.com/user-attachments/assets/a4164f3d-f988-455a-8d6f-f83b24eb130f" />
 
 *Figure 16: Layout showing how the signals are wired. The 4 pin ultrasonic sensor (VCC, TRIG, ECHO, GND) is plugged into the top part of the breadboard, and the raw 5V Echo signal goes straight into column 14, which is the input of the voltage divider.*
 
 ### 2. Fault Condition
 
-<img width="909" height="41" alt="image" src="https://github.com/user-attachments/assets/f25efc76-d43f-44ef-926c-b81a157a59f1" />
+<img width="1600" height="783" alt="Figure 17" src="https://github.com/user-attachments/assets/69ca0a55-2eca-4f18-821b-26ace985e8dd" />
 
 *Figure 17: The Arduino connected and running firmware v1.1. The grounds are all connected correctly, but the Serial Monitor starts out showing "SENSOR FALHOU" because of a timeout in the echo reading.*
 
-<img width="909" height="41" alt="image" src="https://github.com/user-attachments/assets/e258fad1-f246-4f88-8b4c-9915e92a833a" />
+<img width="1600" height="918" alt="Figure 18" src="https://github.com/user-attachments/assets/02dee4ea-b0f9-4661-acdb-494ce1d9e554" />
 
 *Figure 18: Looking at what caused the error. The simulation screen shows the sensor's default target distance of 100 cm, which is more than the code can handle in its time window, so the failure routine kicks in.*
 
 ### 3. Validated Operation
 
-<img width="909" height="41" alt="image" src="https://github.com/user-attachments/assets/76ec11e3-d329-42eb-a16c-663834240702" />
+<img width="1600" height="787" alt="Figure 19" src="https://github.com/user-attachments/assets/7163edd4-5f4e-4b5d-b732-45c7bf071628" />
 
 *Figure 19: The loop working and the status logic confirmed. After sliding the target down to 17.6 inches (44.7 cm), the failure counter resets right away, the live readings come back, and the Serial Monitor shows "STATUS: NORMAL".*
 
